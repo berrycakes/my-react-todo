@@ -2,11 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -14,7 +9,8 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background: #474bff;
+  background: linear-gradient(300deg, #7477ff 0%, #d285ff 100%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -28,11 +24,95 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+.main-div {
+  padding: 50px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+.todo-div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  opacity: 1;
+  transition: all ease 1000ms;
+}
+
+.todo-div:hover {
+  padding: 10px 0;
+  background-color: rgba(128, 128, 128, 0.2);
+}
+
+.todo-input {
+  border: none;
+  padding: 10px;
+  padding-left: 20px;
+  margin: 10px;
+  width: 300px;
+  font-size: 1.5rem;
+  border-radius: 20px;
+}
+
+.todo-input:focus::placeholder {
+  color: transparent;
+}
+
+.todo-input-change {
+  padding: 10px;
+  margin: 10px;
+  width: 300px;
+  font-size: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.363);
+  border: none;
+}
+
+.todo-input:focus::placeholder {
+  color: transparent;
+}
+
+.todo-list {
+  text-decoration: none;
+  list-style: none;
+  width: 320px;
+  transition: all ease-in 1000ms;
+}
+
+.todo-entries {
+  margin: 10px;
+  margin-left: 50px;
+  padding: 10px;
+}
+
+.add-btn,
+.remove-btn,
+.edit-btn,
+.update-btn {
+  padding: 10px;
+  margin: 10px;
+  font-size: 2rem;
+  color: white;
+  background-color: transparent;
+  border: none;
+}
+
+.add-btn:hover,
+.remove-btn:hover,
+.edit-btn:hover,
+.update-btn:hover {
+  color: #d285ff;
+}
+
+.remove-btn {
+  font-size: 1.5rem;
+  position: relative;
+  left: 11px;
+}
+
+.checkbox {
+  height: 25px;
+  width: 25px;
 }
